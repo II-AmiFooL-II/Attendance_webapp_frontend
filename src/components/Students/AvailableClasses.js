@@ -22,7 +22,7 @@ export const AvailableClasses = (props) =>{
             alert("please login again")
             navigate("/Login");
         }
-        const link = "http://10.0.0.238/students/list_all_classes"
+        const link = "http://152.70.51.75:5000/students/list_all_classes"
         const header = {
             "x-access-token":localStorage.getItem("x-access-token"),
             "Content-Type": "application/json"

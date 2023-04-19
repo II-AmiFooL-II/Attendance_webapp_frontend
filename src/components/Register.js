@@ -29,10 +29,10 @@ const Register = () =>{
         alert(JSON.stringify(formData));
         var link = ""
         if(registerType==="students"){
-        link = "http://10.0.0.238/students/register"
+        link = "http://152.70.51.75:5000/students/register"
         }
         else{
-        link = "http://10.0.0.238/teachers/register"
+        link = "http://152.70.51.75:5000/teachers/register"
         }
         console.log(formData)
         axios({

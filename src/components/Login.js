@@ -27,10 +27,10 @@ function Login() {
     var link = ""
     //alert(logintype)
     if(logintype==="students"){
-      link = "http://10.0.0.238/students/login"
+      link = "http://152.70.51.75:5000/students/login"
     }
     else{
-      link = "http://10.0.0.238/teachers/login"
+      link = "http://152.70.51.75:5000/teachers/login"
     }
      
     //alert(JSON.stringify(formData));
