@@ -26,7 +26,7 @@ export const Test = ()=>{
       axios({
         mode: 'no-cors',
         method: 'post',
-        url:"http://127.0.0.1:5000/teachers/create_class ",
+        url:"http://10.0.0.238/teachers/create_class ",
         data: {value} ,
         headers: {
           // 'Authorization': `bearer ${token}`,

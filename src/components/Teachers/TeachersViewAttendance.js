@@ -27,7 +27,7 @@ export const TeachersViewAttendance = ()=>{
             alert("please login again")
             navigate("/Login");
         }
-        const link = "http://127.0.0.1:5000/teachers/view_attendance"
+        const link = "http://10.0.0.238/teachers/view_attendance"
         header = {
             "x-access-token":localStorage.getItem("x-access-token"),
             "Content-Type": "application/json"

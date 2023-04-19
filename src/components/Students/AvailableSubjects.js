@@ -30,7 +30,7 @@ export const AvailableSubjects = ()=>{
             alert("please login again")
             navigate("/Login");
         }
-        const link = "http://127.0.0.1:5000/students/list_all_subjects"
+        const link = "http://10.0.0.238/students/list_all_subjects"
         header = {
             "x-access-token":localStorage.getItem("x-access-token"),
             "Content-Type": "application/json"
@@ -61,7 +61,7 @@ export const AvailableSubjects = ()=>{
 
     const handle_click = (index)=>{
         setOpen(!open);
-        const link = "http://127.0.0.1:5000/students/subscribe_to_class"
+        const link = "http://10.0.0.238/students/subscribe_to_class"
         const formData = {"uname":localStorage.getItem("uname"),"subject_id":data[index]["_id"]}
         header = {
             "x-access-token":localStorage.getItem("x-access-token"),

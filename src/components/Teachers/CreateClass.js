@@ -86,7 +86,7 @@ export const CreateClass = () =>{
       alert("Please login again")
       navigate("/Login");
     }
-    const link = "http://127.0.0.1:5000/teachers/create_class";
+    const link = "http://10.0.0.238/teachers/create_class";
     header = {
         "x-access-token":localStorage.getItem("x-access-token"),
         "Content-Type": "application/json"
@@ -120,7 +120,7 @@ export const CreateClass = () =>{
     axios({
       mode: 'no-cors',
       method: 'post',
-      url:"http://127.0.0.1:5000/teachers/create_class",
+      url:"http://10.0.0.238/teachers/create_class",
       data: {formData} ,
       headers: header
       })
