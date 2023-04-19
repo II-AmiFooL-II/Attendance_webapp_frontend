@@ -24,7 +24,6 @@ export const Attend_class = (props)=>{
         facingMode: "user"
     };
     var header = null
-    permission();
     const webcamRef = React.useRef(null);
     const capture = React.useCallback(
         () => {
@@ -78,6 +77,7 @@ export const Attend_class = (props)=>{
             "Content-Type": "application/json"
         }
         
+        permission();
         GetLocation({"setStatus":setStatus,"setLocation":setLocation})
         setOpen(false);
         }

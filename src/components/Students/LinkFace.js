@@ -16,7 +16,6 @@ export const LinkFace = ()=>{
     height: 720,
     facingMode: "user"
   };
-  permission();
   var header = null
   const webcamRef = React.useRef(null);
   const navigate = useNavigate();
@@ -69,8 +68,10 @@ export const LinkFace = ()=>{
         "Content-Type": "application/json"
     }
     
+    permission();
     setOpen(false);
     }
+
     ,[]
   )
   return (
