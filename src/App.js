@@ -4,10 +4,9 @@ import Nav from './components/Nav';
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
-import { TeacherHome } from './components/Teachers/CreateClass';
 import { Test } from './components/Test';
 import moment from 'moment'
-import Mainbg from './staticFiles/mainbg.png'
+import Mainbg from './staticFiles/bg.png'
 import { Success } from './components/General/Success';
 import { Student } from './components/Students/Student';
 import { Footer } from './components/Footer';
@@ -17,7 +16,7 @@ function App() {
   require('moment-timezone')
   moment.tz.setDefault('Asia/Kolkata')
   const divStyle = {
-    backgroundImage: `url(${Mainbg})`
+    backgroundImage:`url(${Mainbg})`
   };
   return (
     <div style={divStyle}>

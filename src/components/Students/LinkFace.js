@@ -6,6 +6,7 @@ import '../../stylesheets/a.scss'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useNavigate } from 'react-router-dom';
+import bg from '../../staticFiles/sHome.jpg'
 
 export const LinkFace = ()=>{
   const [open, setOpen] = useState(false);
@@ -75,14 +76,38 @@ export const LinkFace = ()=>{
     ,[]
   )
   return (
-
+    <div>
+      <div style={{minWidth:"100%",minHeight:"5%",backgroundColor:"#213A7C",fontWeight:"900",color:"white",justifyContent:"center",display:"flex"}}>
+            <div style={{margin:"10px"}}>
+            This website is just and effort to show attendance management using face recognition (Encoder-Decoder Network)
+            </div>
+        </div>
+        <div style={{maxHeight:"30%",backgroundImage:`url(${bg})`,padding: "80px 0px 60px 0px",backgroundAttachment:"fixed"}}>
+                <div style={{marginLeft:"auto",marginRight:"auto",paddingLeft:"50px",paddingRight:"15px",width:"100%"}}>
+                    <ol style={{backgroundColor:"transparent",fontSize:"15px",marginBottom:"10px",padding:"0px",display:"flex"}}>
+                        <li style={{listStyleType:"none"}}>
+                            <a href='../../Home' style={{textDecoration:"none",color:"#fff"}}>Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='../Student' style={{textDecoration:"none",color:"#fff"}}>Student Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='#' style={{textDecoration:"none",color:"#fff"}}>Link Face</a>
+                        </li>
+                    </ol>
+                    <h1 style={{fontSize:"36px",color:"#fff",fontWeight:"500" ,marginBottom:"35px"}}>Link Face</h1>
+                </div>
+        </div>
+    
     <Components.HomeImg>
       <div style={{"minWidth":"100%" ,"minHeight":"10%",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
         <h2>To mark attendance you need to Link Face</h2>
       </div>
       {cam?(
       <div style={{"maxWidth":"100%" ,"minHeight":"90%",marginTop:"2.5%",display:"flex"}}>
-        <div style={{"float":"left","maxWidth":"50%"}}>
+        <div style={{"float":"left","maxWidth":"50%",marginTop:"3%"}}>
           <Webcam
             audio={false}
             height={"70%"}
@@ -114,5 +139,6 @@ export const LinkFace = ()=>{
           <CircularProgress color="inherit" />
       </Backdrop>
     </Components.HomeImg>
+    </div>
   );    
 }

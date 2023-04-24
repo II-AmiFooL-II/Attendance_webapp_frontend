@@ -2,10 +2,8 @@ import { useState,useEffect } from 'react';
 import * as Components from '../../stylesheets/Style_components'
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import Masonry from '@mui/lab/Masonry';
 import { Spinner } from '../General/Spinner';
-import { margin } from '@mui/system';
-
+import bg from '../../staticFiles/sHome.jpg'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -79,6 +77,30 @@ export const StudentsViewAttendance = () =>{
   }));
   console.log(data)
   return (
+    <div>
+      <div style={{minWidth:"100%",minHeight:"5%",backgroundColor:"#213A7C",fontWeight:"900",color:"white",justifyContent:"center",display:"flex"}}>
+            <div style={{margin:"10px"}}>
+            This website is just and effort to show attendance management using face recognition (Encoder-Decoder Network)
+            </div>
+        </div>
+        <div style={{maxHeight:"30%",backgroundImage:`url(${bg})`,padding: "80px 0px 60px 0px",backgroundAttachment:"fixed"}}>
+                <div style={{marginLeft:"auto",marginRight:"auto",paddingLeft:"50px",paddingRight:"15px",width:"100%"}}>
+                    <ol style={{backgroundColor:"transparent",fontSize:"15px",marginBottom:"10px",padding:"0px",display:"flex"}}>
+                        <li style={{listStyleType:"none"}}>
+                            <a href='../../Home' style={{textDecoration:"none",color:"#fff"}}>Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='../Student' style={{textDecoration:"none",color:"#fff"}}>Student Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='#' style={{textDecoration:"none",color:"#fff"}}>Attendance</a>
+                        </li>
+                    </ol>
+                    <h1 style={{fontSize:"36px",color:"#fff",fontWeight:"500" ,marginBottom:"35px"}}>Your Attendance</h1>
+                </div>
+        </div>
     <Components.Container style={{backgroundColor: "rgba(255,255,255,0.4)" }}>
     {isAvailable ? (data.length>0)?(<div style={{width:"100%" ,margin:"2.5vw"}}>
                                       <div style={{width:"100%" , textAlign:"center"}}>
@@ -123,5 +145,6 @@ export const StudentsViewAttendance = () =>{
                     )
     }
   </Components.Container>
+  </div>
 );
 }

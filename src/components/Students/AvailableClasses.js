@@ -11,6 +11,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import bg from '../../staticFiles/sHome.jpg'
 
 export const AvailableClasses = (props) =>{
     const [isAvailable, setIsAvailable] = useState(false);
@@ -88,6 +89,30 @@ export const AvailableClasses = (props) =>{
     }
 
     return(
+        <div>
+      <div style={{minWidth:"100%",minHeight:"5%",backgroundColor:"#213A7C",fontWeight:"900",color:"white",justifyContent:"center",display:"flex"}}>
+            <div style={{margin:"10px"}}>
+            This website is just and effort to show attendance management using face recognition (Encoder-Decoder Network)
+            </div>
+        </div>
+        <div style={{maxHeight:"30%",backgroundImage:`url(${bg})`,padding: "80px 0px 60px 0px",backgroundAttachment:"fixed"}}>
+                <div style={{marginLeft:"auto",marginRight:"auto",paddingLeft:"50px",paddingRight:"15px",width:"100%"}}>
+                    <ol style={{backgroundColor:"transparent",fontSize:"15px",marginBottom:"10px",padding:"0px",display:"flex"}}>
+                        <li style={{listStyleType:"none"}}>
+                            <a href='../../Home' style={{textDecoration:"none",color:"#fff"}}>Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='../Student' style={{textDecoration:"none",color:"#fff"}}>Student Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='#' style={{textDecoration:"none",color:"#fff"}}>Classes Available</a>
+                        </li>
+                    </ol>
+                    <h1 style={{fontSize:"36px",color:"#fff",fontWeight:"500" ,marginBottom:"35px"}}>Classes Available</h1>
+                </div>
+        </div>
         <Components.Container style={{backgroundColor: "rgba(255,255,255,0.4)" }}>
             {isAvailable ? (data.length>0)?(<div style={{width:"100%" ,margin:"2.5vw"}}>
                                                 <div style={{width:"100%" , textAlign:"center"}}>
@@ -137,5 +162,6 @@ export const AvailableClasses = (props) =>{
             }
             
         </Components.Container>
+        </div>
     );
 }

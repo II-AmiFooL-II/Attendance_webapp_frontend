@@ -17,6 +17,7 @@ import {fromLonLat,toLonLat} from 'ol/proj'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import axios from "axios";
+import bg from '../../staticFiles/sHome.jpg'
 
 export const CreateClass = () =>{
   const [open, setOpen] = useState(false);
@@ -141,6 +142,30 @@ export const CreateClass = () =>{
       })
   }
   return(
+    <div>
+      <div style={{minWidth:"100%",minHeight:"5%",backgroundColor:"#213A7C",fontWeight:"900",color:"white",justifyContent:"center",display:"flex"}}>
+            <div style={{margin:"10px"}}>
+            This website is just and effort to show attendance management using face recognition (Encoder-Decoder Network)
+            </div>
+        </div>
+        <div style={{maxHeight:"30%",backgroundImage:`url(${bg})`,padding: "80px 0px 60px 0px",backgroundAttachment:"fixed"}}>
+                <div style={{marginLeft:"auto",marginRight:"auto",paddingLeft:"50px",paddingRight:"15px",width:"100%"}}>
+                    <ol style={{backgroundColor:"transparent",fontSize:"15px",marginBottom:"10px",padding:"0px",display:"flex"}}>
+                        <li style={{listStyleType:"none"}}>
+                            <a href='../../Home' style={{textDecoration:"none",color:"#fff"}}>Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='../Teacher' style={{textDecoration:"none",color:"#fff"}}>Teacher Home</a>
+                        </li>
+                        <span style={{color:"#fff",marginLeft:"2px",marginRight:"2px"}}>/</span>
+                        <li  style={{listStyleType:"none"}}>
+                            <a href='#' style={{textDecoration:"none",color:"#fff"}}>Create Class</a>
+                        </li>
+                    </ol>
+                    <h1 style={{fontSize:"36px",color:"#fff",fontWeight:"500" ,marginBottom:"35px"}}>Create Class</h1>
+                </div>
+        </div>
     <Components.Container>
       <Components.Card flexlen="50%">
         {status===0  ? (<div> geolocation not supported =</div>)
@@ -149,7 +174,7 @@ export const CreateClass = () =>{
                                 <div style={{margin:"2.5%",justifyContent:"center",alignItems:"center",display:"grid",minWidth:"100%"}}>
                                   <h3>Create Class</h3>
                                   <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enGB} >
-                                      <form >
+                                      <form style={{paddingTop:"5%"}}>
                                         <div style={{display:"flex",minheight:"20%",minWidth:"100%"}}>
                                           <div style={{"float":"left" ,margin:"10px"}}>Start Time</div>
                                           
@@ -176,9 +201,20 @@ export const CreateClass = () =>{
                                         </div><br></br>
                                         <div style={{display:"flex",minheight:"20%",minWidth:"100%"}}>
                                           <div style={{"float":"left" ,margin:"10px"}}> <label >Duration(In minutes):</label><br/></div>
-                                          <input type="text" id="uname" className="btn btn-default" placeholder="50" style={{"float":"right"}} onChange={(e)=>setDur(e.target.value)}/><br/><br/>
-                                        </div>
-                                        <div style={{display:"flex",minheight:"20%",minWidth:"100%"}}>
+                                          <TextField
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Duration"
+                                                label="Duration"
+                                                name="Duration"
+                                                onChange={(e)=>setDur(e.target.value)}
+                                                autoFocus
+                                                type="number"
+                                            />
+                                          <br/><br/>
+                                        </div><br/>
+                                        <div style={{display:"flex",minheight:"20%",minWidth:"100%",margin:"10px"}}>
                                           <div>Location:</div>
                                           <div className="form-check" style={{"marginLeft":"1%"}}>
                                             <input type="radio" className="form-check-input" id="radio1" onChange={(e)=>{setRadio(1);handle_current_location();}} checked={radio===1} value="option1"/>
@@ -209,5 +245,6 @@ export const CreateClass = () =>{
           <CircularProgress color="inherit" />
       </Backdrop>
     </Components.Container>
+    </div>
   );
 }

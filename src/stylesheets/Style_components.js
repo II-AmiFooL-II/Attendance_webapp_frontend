@@ -32,6 +32,7 @@ const getImg = (props) =>{
 
 export const Card =styled.div`
 flex:${(props)=>props.flexlen};
+min-height:"100%"
 ${(props) => 
         props.bgimg === "1"?
             `background-image: url("https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp");`

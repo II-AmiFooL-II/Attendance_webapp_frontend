@@ -1,9 +1,16 @@
 import '../stylesheets/Home.css'
-import CarouselBG from '../staticFiles/CarouselBG.jpg'
+import CarouselBG from '../staticFiles/c2.jpg'
+import CarouselBG1 from '../staticFiles/c1.jpg'
+import CarouselBG2 from '../staticFiles/c4.jpg'
 
 const Home = () =>{
     return(
         <div>
+            <div style={{minWidth:"100%",minHeight:"5%",backgroundColor:"#213A7C",fontWeight:"900",color:"white",justifyContent:"center",display:"flex"}}>
+          <div style={{margin:"10px"}}>
+          This website is just and effort to show attendance management using face recognition (Encoder-Decoder Network)
+          </div>
+        </div>  
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -12,8 +19,8 @@ const Home = () =>{
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-                        <img src={CarouselBG} />
+                        <svg className="bd-placeholder-img"   xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+                        <img src={CarouselBG2} />
                     <div className="container">
                         <div className="carousel-caption text-left">
                             <h1><b>Easy to Use.</b></h1>
@@ -24,7 +31,7 @@ const Home = () =>{
                 </div>
                 <div className="carousel-item">
                     <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-                    <img src={CarouselBG} />
+                    <img src={CarouselBG1} />
                     <div className="container">
                         <div className="carousel-caption">
                             <h1><b>Efficient and Reliable.</b></h1>
@@ -55,10 +62,10 @@ const Home = () =>{
             </a>
         </div>
 
-        <div className="container-fluid">
-        <div className="row jumbotron">
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-                <p className="lead">An Online Attendance System for Colleges and Universities to take their Attendance.
+        <div className="container-fluid" >
+        <div className="row jumbotron" >
+            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10" style={{width:"100%" ,textAlign:"center",backgroundColor:"#213A7C",color:"white"}}>
+                <p className="lead" style={{fontWeight:"500"}}>An Online Attendance System for Colleges and Universities to take their Attendance.
                     If your organization faces any challenges while taking the attendance or your organization has any concerns regarding the system please contact us. 
                 </p>
             </div>
@@ -66,7 +73,7 @@ const Home = () =>{
         </div>
 
 
-        <div className="container-fluid padding">
+        <div className="container-fluid padding" style={{backgroundColor:"#FFCBA5"}}>
             <div className="row welcome text-center">
                 <div className="col-12">
                     <h1 className="display-4">Assess with ease.</h1>
@@ -79,7 +86,7 @@ const Home = () =>{
                 </div>
             </div>
         </div>
-        <div className="container-fluid">
+        <div className="container-fluid" style={{backgroundColor:"#FFCBA5"}}>
             <div className="row text-center padding">
                 <div className="col-xs-12 col-sm-6 col-md-4">
                     <i className="fa fa-bolt fa-3x" aria-hidden="true"></i>
